@@ -1,0 +1,293 @@
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+body {
+    background-color: #171a1f;
+    color: #eeeeee;
+}
+
+p {
+    font-family: 'Quicksand', sans-serif;
+}
+
+h1 {
+    text-align: center;
+}
+
+.white-container {
+    color: #171a1f;
+    background-color: #eeeeee;
+}
+
+.white-container p {
+    font-weight: 600;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+.container {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+}
+
+/* --------------------------------- Intro ---------------------------  */
+
+#intro {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    height: 100vh;
+}
+
+#intro .highlighted {
+    color: #1ecbff;
+}
+
+.know-more-btn {
+    outline: none;
+    font-size:1.5rem;
+    background-color: inherit;
+    border: none;
+    color: #1ecbff;
+    padding: 5px 10px;
+    animation: slide1 2s ease-in-out infinite;
+}
+
+.down-arrow {
+    height: 8vw;
+    width: 8vw;
+    border: solid #1ecbff;
+    border-width: 0 5px 5px 0;
+    display: inline-block;
+    padding: 3px;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    transition: border-width 150ms ease-in-out;
+    
+}
+
+@keyframes slide1 {
+    0%,
+    100% {
+      transform: translate(0, 0);
+    }
+  
+    50% {
+      transform: translate(0, 20px);
+    }
+  }
+
+.down-arrow:hover {
+    border-width: 0 10px 10px 0;
+}
+
+
+/* ---------------------- Profile Section ----------------------- */
+
+#profile img {
+    height: 266px;
+    width: 266px;
+    padding: 10px;
+    border-radius: 100%;
+}
+
+#profile h3 {
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.about-me {
+    text-align: justify;
+}
+
+.profile-row {
+    padding: 2rem 0;
+}
+
+.img-border {
+    margin:0 auto;
+    text-align: center;
+    border-radius: 100%;
+    height: 266px;
+    width: 266px;
+    background: linear-gradient(135deg,#1ecbff 50%,#eeeeee 50%);
+}
+
+.my-details {
+    text-align: center;
+}
+
+#age {
+    font-style: normal;
+}
+
+
+/* ----------------------- Education --------------------------- */
+
+.education-box {
+    margin-top: 2rem;
+}
+
+.education-box .row {
+    margin: 3rem 0;
+}
+
+.ed-desc, .ed-title {
+    margin-top:1rem;
+}
+
+.education-box p {
+    margin-bottom: 0.2rem;
+}
+
+/* ------------------------- Skills ---------------------------- */
+
+.skill {
+    border-radius: 0.2rem;
+    display: block;
+    color: #1ecbff;
+    text-align: center;
+    background-color: #171a1f;
+    margin: 0.5rem 0;
+}
+
+
+.skill:hover {
+    background-color: #0b0d0f;
+}
+
+/* ------------------------ Previous Work ---------------------- */
+
+.project-img img {
+    border-radius: 10px;
+    border: 1px solid #8d8d8d;
+    width: 100%;
+    height: auto;    
+}
+
+.project-box {
+    margin-top: 4rem;
+}
+/* ------------------------- Footer ---------------------------- */
+
+#contact {
+    text-align: center;
+
+}
+
+#contact p {
+    font-size: 1.3rem;
+}
+
+.social-icons a {
+    text-decoration: none;
+    color:inherit;
+}
+
+.work-icon {
+    margin-left: 3rem;
+    transition: transform 100ms ease-in;
+}
+
+.work-icon:hover {
+    transform: translateY(-3px);
+}
+
+.work-icon:first-of-type{
+    margin-left: 0;
+}
+
+
+/* ----------------------- Animations -------------------------- */
+.slide-in-top {
+    transform: translateY(-20%);
+}
+
+.slide-in-bottom {
+    transform: translateY(20%);
+}
+
+.slide-in-left {
+    transform: translateX(-20%);
+}
+
+.slide-in-right {
+    transform: translateX(20%);
+}
+
+.slide-in {
+    opacity: 0;
+    transition: opacity 750ms ease-in, transform 750ms ease-in;
+}
+
+.slide-in.appear{
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.fade-in {
+    opacity: 0;
+    transition: opacity 750ms ease-in;
+}
+
+.fade-in.appear {
+    opacity: 1;
+}
+
+/* -------------------- Scrollbar View ------------------ */
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #171a1f;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #1ecbff;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #028bb4;;
+  }
+
+/* --------------- Responsive Mobile and Laptop View --------------- */
+
+@media only screen and (max-width:1000px) {
+   
+}
+
+@media only screen and (max-width:767px) {
+    #intro h1 {
+       font-size: 1.4rem;
+   }
+
+    .container {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+   
+}
+
+@media only screen and (max-width: 575px) {
+    .work-icon {
+        margin-left: 2rem;
+    }
+   
+    #education {
+        text-align: center;
+    }
+
+    #contact p {
+        font-size: 1rem;
+    }
+}
